@@ -16,10 +16,15 @@ A batteries-included React starter with an opinionated, production-ready toolcha
 
 ## Getting started
 
+Requires Node 22 (pinned in `.nvmrc`). Install [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) if you don't have it, then:
+
 ```bash
+nvm use
 pnpm install
 pnpm dev
 ```
+
+If you use [direnv](https://direnv.net/), `.envrc` runs `nvm use` for you automatically on `cd`.
 
 ## Scripts
 
