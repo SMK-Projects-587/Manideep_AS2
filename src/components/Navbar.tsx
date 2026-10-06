@@ -8,8 +8,8 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div>
-      <nav className="border-border flex items-center justify-between border-b px-4 py-4 md:grid md:grid-cols-3 md:px-[4%]">
+    <nav className="border-border border-b">
+      <div className="mx-auto flex w-full max-w-[1126px] items-center justify-between px-4 py-4 md:grid md:grid-cols-3 md:px-[4%]">
         {/* Logo */}
         <div>
           <a href="/" className="flex items-center gap-2">
@@ -27,7 +27,7 @@ function Navbar() {
             Home
           </a>
 
-          <a href="explore" className="text-body hover:text-hover text-sm">
+          <a href="/explore" className="text-body hover:text-hover text-sm">
             Explore
           </a>
 
@@ -53,7 +53,7 @@ function Navbar() {
             height="30"
           />
         </button>
-      </nav>
+      </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
@@ -75,7 +75,7 @@ function Navbar() {
           </button>
         </div>
       )}
-    </div>
+    </nav>
   );
 }
 
