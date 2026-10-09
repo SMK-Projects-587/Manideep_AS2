@@ -7,7 +7,9 @@
   --color-heading: #1c1b29;
   --color-body: #6b6375;
   --color-primary: #5b4be1;
+  --color-secondary: #6b6980;
   --color-hover: #26252f;
+  --color-background: #fbfaf9;
   --color-border: #e5e4e7;
 }
 :root {
@@ -61,7 +63,6 @@
 #root {
   width: 100%;
   max-width: 100%;
-  text-align: center;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -75,29 +76,9 @@ body {
 
 h1,
 h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+  margin: 0;
 }
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
 p {
   margin: 0;
 }
