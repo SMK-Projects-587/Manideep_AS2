@@ -4,6 +4,8 @@ import xIcon from '@/assets/close.svg';
 import hamIcon from '@/assets/ham.svg';
 import logo from '@/assets/logo.svg';
 
+import Button from './Button';
+
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -37,9 +39,9 @@ function Navbar() {
         </div>
 
         {/* Desktop Get Inspired */}
-        <button className="bg-primary hidden h-[44px] w-[152px] cursor-pointer justify-self-end rounded-xl text-sm font-normal text-white transition-colors hover:bg-[#4939C9] md:block">
+        <Button className="hidden h-[44px] w-[152px] justify-self-end md:block">
           Get Inspired
-        </button>
+        </Button>
 
         {/* Mobile Hamburger */}
         <button
@@ -70,9 +72,7 @@ function Navbar() {
             About
           </a>
 
-          <button className="bg-primary h-[52px] w-[160px] rounded-xl text-sm font-normal text-white">
-            Get Inspired
-          </button>
+          <Button className="h-[44px] w-[142px]">Get Inspired</Button>
         </div>
       )}
     </nav>

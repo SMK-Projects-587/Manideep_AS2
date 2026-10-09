@@ -1,5 +1,7 @@
 import quotes from '@/assets/quotes.svg';
 
+import Button from './Button';
+
 function Hero() {
   return (
     <section className="border-border bg-background border-b">
@@ -19,13 +21,16 @@ function Hero() {
             </p>
 
             <div className="mt-3 flex items-center gap-4">
-              <button className="bg-primary h-[44px] w-[136px] cursor-pointer rounded-xl text-sm font-normal text-white transition-colors hover:bg-[#4939C9]">
+              <Button variant="primary" className="h-[44px] w-[136px]">
                 Get inspired
-              </button>
+              </Button>
 
-              <button className="text-heading h-[44px] w-[116px] cursor-pointer rounded-xl border border-[#ECEAF3] bg-[#FBFAF9] text-sm font-normal transition-colors hover:bg-[#e7e5e2]">
+              <Button
+                variant="secondary"
+                className="h-[44px] w-[136px] hover:bg-[#ebeae8]"
+              >
                 Browse all
-              </button>
+              </Button>
             </div>
           </div>
 
@@ -33,16 +38,16 @@ function Hero() {
           <div className="border-border mt-3 flex h-[126px] flex-col gap-8 rounded-3xl border bg-white px-5 py-6 md:h-[246px] md:gap-12 md:px-7 md:py-6">
             <img
               src={quotes}
-              alt=""
+              alt="quotes"
               width="24"
               height="24"
               className="hidden md:block"
             />
-            <p className="font-display text-heading text-[18px] leading-none font-normal md:max-w-[330px] md:text-[24px] md:leading-[1.2]">
+            <p className="font-display text-heading text-[16px] leading-none font-normal md:max-w-[330px] md:text-[24px] md:leading-[1.2]">
               The best way out is always through.
             </p>
 
-            <p className="text-secondary text-[13px] leading-none font-normal">
+            <p className="text-secondary text-[12px] leading-none font-normal">
               — Robert Frost
             </p>
           </div>
