@@ -1,4 +1,5 @@
 import BrowseByMood from './components/BrowseByMood';
+import FreshQuotesContainer from './components/FreshQuotesContainer';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Hero />
       <BrowseByMood />
+      <FreshQuotesContainer />
     </>
   );
 }
