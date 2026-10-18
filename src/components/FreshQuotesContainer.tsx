@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import FreshQuotes from './FreshQuotes';
 
@@ -20,7 +20,7 @@ function FreshQuotesContainer() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  async function fetchQuotes() {
+  const fetchQuotes = useCallback(async () => {
     try {
       setLoading(true);
       setError('');
@@ -46,10 +46,10 @@ function FreshQuotesContainer() {
     } finally {
       setLoading(false);
     }
-  }
+  }, []);
   useEffect(() => {
     void fetchQuotes();
-  }, []);
+  }, [fetchQuotes]);
   return (
     <FreshQuotes
       quotes={quotes}
