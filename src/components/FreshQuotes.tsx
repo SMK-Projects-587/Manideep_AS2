@@ -29,7 +29,7 @@ function FreshQuotes({ quotes, loading, error, onShuffle }: FreshQuotesProps) {
             variant="secondary"
             onClick={onShuffle}
             disabled={loading}
-            className="border-border text-primary gap-1.5 px-4 py-3 hover:bg-[#F5F3FF]"
+            className="border-border text-primary gap-1.5 bg-white px-4 py-3 hover:bg-[#F5F3FF]"
           >
             ⟳ Shuffle
           </Button>
