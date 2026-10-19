@@ -11,6 +11,9 @@
   --color-hover: #26252f;
   --color-background: #fbfaf9;
   --color-border: #e5e4e7;
+
+  --color-mood-bg: #f1effd;
+  --color-mood-text: #392e97;
 }
 :root {
   --text: #6b6375;
