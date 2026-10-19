@@ -10,8 +10,8 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="border-border relative border-b">
-      <div className="mx-auto flex w-full max-w-[1126px] items-center justify-between px-4 py-4 md:grid md:grid-cols-3">
+    <nav className="border-border sticky top-0 z-50 border-b bg-white">
+      <div className="relative z-50 mx-auto flex w-full max-w-[1126px] items-center justify-between px-4 py-4 md:grid md:grid-cols-3">
         {/* Logo */}
         <div>
           <a href="/" className="flex items-center gap-2">
@@ -59,7 +59,7 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-full left-0 z-50 flex w-full flex-col items-center gap-8 bg-white py-16 md:hidden">
+        <div className="fixed inset-0 z-40 mt-16 flex min-h-screen w-full flex-col items-center gap-8 bg-white pt-24 pb-16 md:hidden">
           <a href="/home" className="text-body">
             Home
           </a>
