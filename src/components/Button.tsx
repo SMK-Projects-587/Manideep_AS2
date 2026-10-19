@@ -4,6 +4,8 @@ type ButtonProps = {
   children: ReactNode;
   variant?: 'primary' | 'secondary';
   className?: string;
+  onClick?: () => void;
+  disabled?: boolean;
 };
 
 const variantStyles = {
@@ -15,10 +17,15 @@ function Button({
   children,
   variant = 'primary',
   className = '',
+  onClick,
+  disabled = false,
 }: ButtonProps) {
   return (
     <button
-      className={`cursor-pointer rounded-xl text-sm leading-none font-normal transition-colors ${variantStyles[variant]} ${className}`}
+      type="button"
+      onClick={onClick}
+      disabled={disabled}
+      className={`cursor-pointer rounded-xl text-sm leading-none font-normal transition-colors ${variantStyles[variant]} ${className} disabled:cursor-not-allowed disabled:opacity-50`}
     >
       {children}
     </button>
